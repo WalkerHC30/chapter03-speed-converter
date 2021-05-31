@@ -1,4 +1,7 @@
 import React, {useState} from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import UnitControl from './UnitControl';
 
 const Convert = () => {
     const [inputValue, setInputValue] = useState(0);
@@ -10,17 +13,9 @@ const Convert = () => {
 
     return (
         <div className="container">
-            <div className="card-header">Network Speed Converter</div>
+            <Header />
             <div className="card-body">
-                <div className="unit-control">
-                    <div className="unit">Mbps</div>
-                    <span className="exchange-icon fa-fw fa-stack">
-                        <i className="far fa-circle fa-stack-2x"></i>
-                        <i className="far fa-exchange-alt fa-stack-1x"></i>
-                    </span>
-                    <div className="unit">MB/s</div>
-                </div>
-
+                <UnitControl />
                 <div className="converter">
                     <div className="flex-1">
                         <div className="converter-title">Set</div>
@@ -42,8 +37,7 @@ const Convert = () => {
                     </div>
                 </div>
             </div>
-            <div className="card-footer">FAST</div>
-
+            <Footer inputValue={inputValue} />
         </div>
     )
 }

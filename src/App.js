@@ -1,5 +1,5 @@
 import './App.css';
-import Convert from './Convert';
+import Convert from './components/Convert';
 
 function App() {
   return (
