@@ -1,5 +1,13 @@
+import Convert from './components/Convert'; //要放在最上面
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
 import './App.css';
-import Convert from './components/Convert';
+
+library.add(fab, fas, far);
+
+
 
 function App() {
   return (
